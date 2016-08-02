@@ -38,7 +38,7 @@ def quickSort(A, start, end):
     quickSort(A, wall+2, end)
         
             
-
+# solution uses O(n) space
 def solution(A):
 
     if len(A) <= 1:
