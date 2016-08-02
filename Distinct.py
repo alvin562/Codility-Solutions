@@ -44,16 +44,20 @@ def solution(A):
     if len(A) <= 1:
         return len(A)
 
-    answer = 0
-    total = A[0]
-
     quickSort(A, 0, len(A)-1)
     
-    for i in range(len(A)):
+    distinctNumbers = []
+    distinctNumbers.append(A[0])
+    total = 1
+    
+    for i in range(1, len(A)):
         
-        if total != A[i]:
-            
-            total = A[i]
-            answer += 1
-            
-    return answer
+        previousNumber = distinctNumbers[i-1]
+        
+        if previousNumber != A[i]:
+                
+            total += 1
+        
+        distinctNumbers.append(A[i])
+        
+    return total
