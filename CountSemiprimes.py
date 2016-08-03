@@ -3,6 +3,12 @@
 import math
 
 
+# this solution still needs a lot of fixing
+# it only gets a 55% on codility since the performance
+# is really bad (runs in O(N*log(log(N)) + M*N when
+# it is supposed to run in O(N*log(log(N)) + M)
+
+
 # returns a list of primes under a given limit
 # using the Sieve of Eratosthenes algorithm
 def generatePrimes(n):
