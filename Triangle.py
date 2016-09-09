@@ -55,9 +55,16 @@ def solution(A):
     q = 1
     r = 2
     
-    while p <= len(A)-2:
+    while p <= len(A)-3:
         
         if is_triangular(A[p], A[q], A[r]):
             
             return 1
+        
+        else:
             
+            p += 1
+            q += 1
+            r += 1
+            
+    return 0
